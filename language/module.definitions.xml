@@ -26,7 +26,7 @@
   <string name="account_city"><![CDATA[City]]></string>
   <string name="address_commercial"><![CDATA[Commercial]]></string>
   <string name="address_residential"><![CDATA[Residential]]></string>
-  <string name="module_description"><![CDATA[This module will communicate with UPS to retrieve real time shipping quotes based on the basket weight. Please make sure all products have a weight to use this module.]]></string>
+  <string name="module_description"><![CDATA[This module will communicate with UPS to retrieve real time shipping quotes based on the weights and dimensions (if available) of each product in the basket.<br>Please make sure all products have a weight to use this module.<br>If your installation supports product dimensions, please make sure all products have those dimensions entered to receive the most accurate shipping quotes.]]></string>
   <string name="module_title"><![CDATA[UPS]]></string>
   <string name="package_type"><![CDATA[Packaging Type]]></string>
   <string name="default_package_length"><![CDATA[Default Package Length]]></string>
