@@ -165,8 +165,17 @@ class UPS {
 		$packer->addConstraint(new \Awsp\Constraint\PackageValueConstraint($packer->getMeasurementValue(130), 'size', '<'), 'preferred_size', false, true);
 		$packer->addConstraint(new \Awsp\Constraint\PackageValueConstraint($packer->getMeasurementValue(70), 'weight', '<'), 'preferred_weight', false, true);
 		$packer->addConstraint(new \Awsp\Constraint\PackageHandlingConstraint(array($packer->getMeasurementValue(60), $packer->getMeasurementValue(30))), 'additional_handling', false, true);
+		// Add manufacturer filter depending on settings
+		$filter = null;
+		if (!empty($this->_settings['ship_by_manufacturer'])) {
+			$filter = function(\Awsp\Ship\Package $a, \Awsp\Ship\Package $b, &$error) {
+				$am = filter_var($a->getOption('manufacturer'), FILTER_VALIDATE_INT);
+				$bm = filter_var($b->getOption('manufacturer'), FILTER_VALIDATE_INT);
+				return ($am === $bm);
+			};
+		}
 		// Add merge strategies
-		$packer->addMergeStrategy(new \Awsp\MergeStrategy\DefaultMergeStrategy());
+		$packer->addMergeStrategy(new \Awsp\MergeStrategy\DefaultMergeStrategy($filter));
 		$notPacked = array();
 		try {
 			$packages = $packer->makePackages($this->_basket['contents'], $notPacked);

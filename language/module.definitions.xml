@@ -71,6 +71,8 @@
   <string name="title_products"><![CDATA[UPS Products]]></string>
   <string name="title_pickup_type"><![CDATA[Pickup Type]]></string>
   <string name="title_rate"><![CDATA[Rate]]></string>
+  <string name="title_ship_by_manufacturer"><![CDATA[Separate Packages by Manufacturer]]></string>
+  <string name="info_ship_by_manufacturer"><![CDATA[Prevents packing algorithm from placing items from different manufacturers in the same box]]></string>
   <string name="title_store_info"><![CDATA[Store Info]]></string>
  </group>
 </definitions>

@@ -23,7 +23,6 @@
 	<div id="UPS" class="tab_content">
 		<h3><a href="http://www.ups.com" target="_blank">{$TITLE}</a></h3>
 		<p>{$LANG.awsp_ups.module_description}</p>
-
 		<fieldset>
 			<legend>{$LANG.module.cubecart_settings}</legend>
 			<div><label for="status">{$LANG.common.status}</label><span><input type="hidden" name="module[status]" id="status" class="toggle" value="{$MODULE.status}" /></span></div>
@@ -74,7 +73,6 @@
 				</span>
 			</div>
 		</fieldset>
-		
 		<fieldset>
 			<legend>{$LANG.awsp_ups.title_store_info}</legend>
 			<div><label for="account_phone">{$LANG.awsp_ups.account_phone}</label><span><input name="module[account_phone]" id="account_phone" class="textbox" type="text" value="{$MODULE.account_phone}" /></span></div>
@@ -82,7 +80,6 @@
 			<div><label for="account_address_2">{$LANG.awsp_ups.account_address_2}</label><span><input name="module[account_address_2]" id="account_address_2" class="textbox" type="text" value="{$MODULE.account_address_2}" /></span></div>
 			<div><label for="account_city">{$LANG.awsp_ups.account_city}</label><span><input name="module[account_city]" id="account_city" class="textbox" type="text" value="{$MODULE.account_city}" /></span></div>
 		</fieldset>
-		
 		<fieldset>
 			<legend>{$LANG.awsp_ups.title_package_info}</legend>
 			<div>
@@ -104,8 +101,8 @@
 			<div><label for="defaultPackageLength">{$LANG.awsp_ups.default_package_length}</label><span><input name="module[defaultPackageLength]" id="defaultPackageLength" class="textbox number" type="text" value="{$MODULE.defaultPackageLength}" required="required" /></span></div>
 			<div><label for="defaultPackageWidth">{$LANG.awsp_ups.default_package_width}</label><span><input name="module[defaultPackageWidth]" id="defaultPackageWidth" class="textbox number" type="text" value="{$MODULE.defaultPackageWidth}" required="required" /></span></div>
 			<div><label for="defaultPackageHeight">{$LANG.awsp_ups.default_package_height}</label><span><input name="module[defaultPackageHeight]" id="defaultPackageHeight" class="textbox number" type="text" value="{$MODULE.defaultPackageHeight}" required="required" /></span></div>
+			<div><label for="ship_by_manufacturer" title="{$LANG.awsp_ups.info_ship_by_manufacturer}">{$LANG.awsp_ups.title_ship_by_manufacturer}</label><span><input type="hidden" name="module[ship_by_manufacturer]" id="ship_by_manufacturer" class="toggle" value="{$MODULE.ship_by_manufacturer}" /></span></div>
 		</fieldset>
-		
 		<fieldset>
 			<legend>{$LANG.awsp_ups.title_account_info}</legend>
 			<div><label for="accountKey">{$LANG.awsp_ups.account_key}</label><span><input name="module[accountKey]" id="accountKey" class="textbox" type="text" value="{$MODULE.accountKey}" /></span></div>
@@ -113,7 +110,6 @@
 			<div><label for="accountPass">{$LANG.awsp_ups.account_pass}</label><span><input name="module[accountPass]" id="accountPass" class="textbox" type="text" value="{$MODULE.accountPass}" /></span></div>
 			<div><label for="accountNumber">{$LANG.awsp_ups.account_number}</label><span><input name="module[accountNumber]" id="accountNumber" class="textbox" type="text" value="{$MODULE.accountNumber}" /></span></div>
 		</fieldset>
-		
 		<fieldset>
 			<legend>{$LANG.awsp_ups.title_products}</legend>
 			<div>
