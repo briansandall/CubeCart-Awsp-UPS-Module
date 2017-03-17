@@ -152,10 +152,13 @@ class UPS {
 		if (!isset($this->_config['ups']['shipper_address'])) {
 			return false; // allows page to display (with no rates) when shipper address not valid - exception already logged above
 		}
-		$packer = new \Awsp\Packer\Vendor\CubeCart\RecursivePacker(150, 108, 165, false);
-		// Set default package dimensions based on store settings
+		// Filter config settings before passing to IPacker constructor
+		$init_options = array_filter($this->_config, function($k) { return in_array($k, array('weight_unit','dimension_unit')); }, ARRAY_FILTER_USE_KEY);
+		// Construct packer with desired config options made available to it
+		$packer = new \Awsp\Packer\Vendor\CubeCart\RecursivePacker(150, 108, 165, false, $init_options);
+		// Set default package dimensions based on store settings (should not need to be converted)
 		$packer->setDefaultDimensions(array($this->_settings['defaultPackageLength'], $this->_settings['defaultPackageWidth'], $this->_settings['defaultPackageHeight']));
-		// Add store settings for per-package weight
+		// Add store settings for per-package weight (should not need to be converted)
 		$packer->setPackagingWeight($this->_settings['packagingWeight']);
 		// Add additional constraints
 		$packer->addConstraint(new \Awsp\Constraint\PackageOptionConstraint($packer->getCurrencyValue(50000.00), 'insured_amount', '<=', true), 'max_insurance', true, true);
