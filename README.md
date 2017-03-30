@@ -30,6 +30,12 @@ Before starting, make sure you meet all of the requirements listed above.
 
 9. (Optional) Delete example files in the root `/Awsp` directory
 
+## OPTIONAL
+
+In order for the 'Separate Packages by Manufacturer' setting to function, you need to
+either install the AWSP MultiPackageProducts plugin OR import the code snippet located
+in this module's `/snippets` directory.
+
 ## DUAL INSTALLATION
 If you would like to have both the standard UPS and Awsp UPS modules installed at the
 same time, e.g. for comparing rate results, you can do so by changing the following

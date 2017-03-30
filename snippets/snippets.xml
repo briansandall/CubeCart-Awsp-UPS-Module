@@ -1,0 +1,29 @@
+<snippets_import version="1.0">
+	<info>
+		<author>Brian Sandall</author>
+		<homepage>https://bitbucket.org/briansandall/awsp-ship</homepage>
+	</info>
+	<snippets>
+		<snippet>
+			<enabled>1</enabled>
+			<unique_id>Awsp_UPS-snippets@cubecart.com</unique_id>
+			<description>Saves extra product data to the cart so it may be used in shipping logic</description>
+			<hook_trigger>class.cart.add.save</hook_trigger>
+			<php_code><![CDATA[<?php
+if (isset($hash, $this->basket['contents'][$hash])) {
+	// Allows packing items by manufacturer if they do not ship from the same origin
+	if (isset($product['manufacturer'])) {
+		$this->basket['contents'][$hash]['manufacturer'] = filter_var($product['manufacturer'], FILTER_VALIDATE_INT);
+	}
+	// If your CubeCart installation supports flagging a product as requiring
+	// individual shipping, this needs to be available to the shipping module
+	if (!empty($product['ships_individually'])) {
+		$this->basket['contents'][$hash]['ships_individually'] = 1;
+	}
+}
+?>]]></php_code>
+			<version>1.0.0</version>
+			<priority>1</priority>
+		</snippet>
+	</snippets>
+</snippets_import>
