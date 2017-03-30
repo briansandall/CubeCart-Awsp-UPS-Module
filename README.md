@@ -3,10 +3,13 @@ A UPS shipping module for CubeCart based on the AWSP shipping library.
 ---
 
 ## REQUIREMENTS
+
 * [Cubecart](http://www.cubecart.com) v6 or higher: http://www.cubecart.com
+
 * Database supporting 'length', 'height', and 'width' fields for products  
 	See https://github.com/briansandall/v6/commits/product_dimensions
-* [AWSP Shipping Library](https://bitbucket.org/briansandall/awsp-ship) v1.1 or higher:  https://bitbucket.org/briansandall/awsp-ship
+
+* [AWSP Shipping Library](https://bitbucket.org/briansandall/awsp-ship) v1.3 or higher:  https://bitbucket.org/briansandall/awsp-ship
 
 ## INSTALLATION
 Before starting, make sure you meet all of the requirements listed above.
@@ -37,6 +40,7 @@ either install the AWSP MultiPackageProducts plugin OR import the code snippet l
 in this module's `/snippets` directory.
 
 ## DUAL INSTALLATION
+
 If you would like to have both the standard UPS and Awsp UPS modules installed at the
 same time, e.g. for comparing rate results, you can do so by changing the following
 prior to installing the Awsp UPS module:
