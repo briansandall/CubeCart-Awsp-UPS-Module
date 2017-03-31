@@ -199,10 +199,8 @@ class UPS {
 		}
 		// Exit with error message if any items could not be packed
 		if (!empty($notPacked)) {
-			$names = array();
 			$errors = array();
 			foreach ($notPacked as $p) {
-				$names[] = $p['name'];
 				if (!empty($p['error'])) {
 					$errors[] = "[Item] $p[product_code] ($p[name]): [Error] $p[error]";
 				}
