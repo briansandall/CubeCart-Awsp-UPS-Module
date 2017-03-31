@@ -21,17 +21,15 @@ Before starting, make sure you meet all of the requirements listed above.
 
 3. Place the AWSP shipping library in CubeCart's `/includes/lib/` directory
 
-4. Place this folder and its contents in CubeCart's `/modules/shipping/` directory
+4. Place the entire `UPS` folder from this module in CubeCart's `/modules/shipping/` directory
 
 5. Replace the `/Awsp/includes/autoloader.php` class with the `autoloader.php` file included with the module
 
-6. Rename the `Awsp_UPS` folder to `UPS` (otherwise it appears to customers as 'Awsp UPS')
+6. Enable the plugin and edit its settings from the `Manage Extensions` page of the CubeCart admin panel
 
-7. Enable the plugin and edit its settings from the Manage Plugins page of the CubeCart admin panel
+7. (Optional) Delete `/Awsp/config.php` - settings are handled by the module via CubeCart's admin panel
 
-8. (Optional) Delete `/Awsp/config.php` - settings are handled by the module via CubeCart's admin panel
-
-9. (Optional) Delete example files in the root `/Awsp` directory
+8. (Optional) Delete example files in the root `/Awsp` directory
 
 ## OPTIONAL
 
@@ -45,8 +43,10 @@ If you would like to have both the standard UPS and Awsp UPS modules installed a
 same time, e.g. for comparing rate results, you can do so by changing the following
 prior to installing the Awsp UPS module:
 
-1. Open `shipping.class.php` in a text editor; change the class name to `Awsp_UPS`
+1. Rename this module's `UPS` folder to `Awsp_UPS`.
 
-2. Open `admin/index.tpl` in a text editor; change `<div id="UPS">` to `<div id="Awsp_UPS">`
+2. Open `shipping.class.php` in a text editor; change the class name to `Awsp_UPS`
 
-3. Follow the regular installation instructions, but skip steps 2 and 6.
+3. Open `admin/index.tpl` in a text editor; change `<div id="UPS">` to `<div id="Awsp_UPS">`
+
+4. Follow the regular installation instructions but skip step 2.
